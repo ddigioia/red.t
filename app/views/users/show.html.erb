@@ -1,0 +1,11 @@
+<h3><%= @user.name %></h3>
+
+
+<%= @user.name %>
+<%= @user.email %>
+
+<% if current_user == params[:id] %>
+	<%= link_to "Edit user", edit_user_path %>
+<% end %>
+
+

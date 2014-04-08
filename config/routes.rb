@@ -3,7 +3,9 @@ RedT::Application.routes.draw do
 resources :users 
 resources :links
 
-# get '/', to: 'links#index'
+get '/', to: 'links#index'
+
+get '/login', to: 'sessions#new'
 
 
 
