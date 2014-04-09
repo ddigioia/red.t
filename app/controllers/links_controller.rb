@@ -1,5 +1,7 @@
 class LinksController < ApplicationController
 
+
+
 	def index
 		@links = Link.all
 	end
@@ -18,14 +20,24 @@ class LinksController < ApplicationController
 		end
 	end
 
+	def edit
+		@link = Link.find(params[:id])
+	end
+
 	def show
 		@link = Link.find(params[:id])
 	end
 
 	def update
+		@link = Link.find(params[:id])
+		@link.update!(link_params)
+		redirect_to @link
 	end
 
 	def destroy
+		@link = Link.find(params[:id])
+		@link.destroy
+		redirect_to links_path
 	end
 
 	private

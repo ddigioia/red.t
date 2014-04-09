@@ -1,3 +1,7 @@
 <h1><%= link_to @link.title, "#{@link.url}" %></h1>
 <br>by: <%= link_to @link.user.name, @link.user %> on: <%= @link.date %>
 <p><%= @link.body %></a>
+
+	<% if @link.user == current_user %>
+	<%= link_to "edit", edit_link_path %>
+	<% end %>

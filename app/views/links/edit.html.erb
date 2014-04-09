@@ -1,0 +1,9 @@
+<%= render 'form' %>
+
+<% if current_user == @link.user %>
+
+	<%= form_tag(link_path, method: "delete") do %>
+	<%= submit_tag("Delete your link forever") %>
+	<% end %>
+
+<% end %>
