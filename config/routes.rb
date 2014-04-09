@@ -6,7 +6,9 @@ resources :links
 get '/', to: 'links#index'
 
 get '/login', to: 'sessions#new'
+get '/logout', to: 'sessions#destroy'
 
+post '/sessions', to: 'sessions#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

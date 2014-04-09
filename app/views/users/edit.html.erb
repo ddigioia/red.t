@@ -2,3 +2,12 @@
 
 
 <%= render 'form' %>
+
+
+<% if current_user == @user %>
+
+	<%= form_tag(user_path, method: "delete") do %>
+	<%= submit_tag("Delete your account forever") %>
+	<% end %>
+
+<% end %>
